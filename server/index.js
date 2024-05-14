@@ -31,8 +31,8 @@ app.use("/kpi", kpiRoutes);
 app.use("/product", productRoutes);
 app.use("/transaction", transactionRoutes);
 
-const path = require("path");
-__dirname = path.resolve();
+import path from "path";
+const __dirname = path.resolve();
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 app.get("*", (req, res) => {
